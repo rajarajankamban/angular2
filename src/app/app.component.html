@@ -1,0 +1,17 @@
+<h1>
+  {{title}}
+</h1>
+Two Way
+<input [(ngModel)] = "product.name">
+One Way
+<input [value]="product.name" >
+<button (click)="changeName($event)">Set Name</button>
+<p [innerText]="product.name"></p>
+
+<br>
+<!--button (click)="toggleValue()"></button>
+<div [style.visibility]="vis?'visible':'false'" [innerText]="product.name"><div-->
+
+<app-header></app-header>
+<app-main></app-main>
+<app-footer></app-footer>
