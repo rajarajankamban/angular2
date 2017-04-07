@@ -1,22 +1,29 @@
 <div class="middle" >
     <div class="">
+     
       <div class="container-fluid pb30" ng-controller="hungryList">
+         <div class="col-md-12">
+          <div class="col-md-3 ">
+            <input type="text" class="form-control" [(ngModel)]="listFilter"><br>
+            <div>Filtered by : {{listFilter}}</div>
+          </div>
+         </div>
         <div class="col-md-2">
-          <div class="col-md-2 hungry-list-breadcrum"></div>
+          <div class="hungry-list-breadcrum"></div>
         </div>
-        <div class="col-md-7 hungry-list">
-          <!--div class="col-md-12 hungry-list-item" ng-repeat="res in resturantList">
-            <div class="rest-img pull-left"><img ng-src="{{res.imgSource}}"></div>
+        <div class="col-md-7 hungry-list" *ngIf='resturantList && resturantList.length'>
+          <div class="col-md-12 hungry-list-item"   *ngFor="let res of resturantList">
+            <div class="rest-img pull-left"><img [src]="res.imgSource"></div>
             <div class="pull-left col-md-8">
-                <div ng-bind="res.name"></div>
-                <div ng-bind="res.place"></div>
-                <div ng-bind="res.rating"></div>
+                <div [innerText]="res.name"></div>
+                <div [innerText]="res.place"></div>
+                <div [innerText]="res.rating"></div>
                 <div></div>
             </div>    
-          </div-->
+          </div>
         </div>
         <div class="col-md-3">
-          <div class="col-md-3 hungry-bill-summary"></div>
+          <div class="hungry-bill-summary"></div>
         </div>
       </div>
     </div>

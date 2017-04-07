@@ -1,0 +1,14 @@
+<h1>
+  {{title}}
+</h1>
+Two Way
+<input [(ngModel)] = "product.name">
+One Way
+<input #textBox [value]="name" >
+<button (click)="changeName(textBox.value)">Set Name</button>
+<p [innerText]="product.name"></p>
+<pre>{{name}}</pre>
+<br>
+<button (click)="toggleValue()">{{showItem ? 'hide ' : 'show ' }}Content</button>
+<!--div [style.visibility]="vis?'visible':'false'" [innerText]="product.name"><div-->
+<div *ngIf = "showItem">Hello</div>

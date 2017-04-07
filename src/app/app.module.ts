@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from './basepage/app.header';
 import {MainComponent} from './basepage/app.main';
 import {FooterComponent} from './basepage/app.footer';
+import {InputFieldComponent} from './InputFieldComponent/inputfield.component';
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent,MainComponent,FooterComponent
+    AppComponent,HeaderComponent,MainComponent,FooterComponent,InputFieldComponent
   ],
   imports: [
     BrowserModule,
