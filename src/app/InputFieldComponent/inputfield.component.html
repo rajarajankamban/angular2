@@ -4,11 +4,44 @@
 Two Way
 <input [(ngModel)] = "product.name">
 One Way
-<input #textBox [value]="name" >
-<button (click)="changeName(textBox.value)">Set Name</button>
+<input #textBox1 [value]="product.name" >
+<button (click)="changeName(textBox1.value)">Set Name</button>
 <p [innerText]="product.name"></p>
 <pre>{{name}}</pre>
 <br>
 <button (click)="toggleValue()">{{showItem ? 'hide ' : 'show ' }}Content</button>
 <!--div [style.visibility]="vis?'visible':'false'" [innerText]="product.name"><div-->
 <div *ngIf = "showItem">Hello</div>
+
+<!-- Add Details Component -->
+
+<div class="container">
+<div class=" col-md-offset-3 col-md-6 clear_fix">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <label>Name : </label> <input #userName class="form-control" type="text"> <br>
+    <label>Gender : </label> <br>
+      <label class="radio-inline"><input class="form-control" type="radio" name="gender" value="male" tex>Male </label> 
+      <label class="radio-inline"><input type="radio" class="form-control" value="female" name="gender">Female</label> <br><br>
+    <label>select option</label>
+      <select class="form-control">
+        <option></option>
+      </select>
+      <br>
+      <button class="btn btn-primary col-md-12">Add</button>
+  </div>
+</div>
+</div>
+<div class=" col-md-offset-3 col-md-6 clear_fix">
+<table class="table table-hover table-bordered">
+  <tr>
+    <th> Name </th>
+    <th> Gender </th>
+    <th> Option </th>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+</div>
+</div><br>

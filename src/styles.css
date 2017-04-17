@@ -71,3 +71,10 @@ a:hover{text-decoration: none;color:#333; cursor:pointer;}
 .pt20{padding-top: 20px;}
 .pt10{padding-top: 10px;}
 .clear_fix{clear:both;}
+
+input[type="radio"] {
+  width: 16px;
+}
+.radio-inline input[type="radio"]{
+    margin-top: -7px;
+    }
