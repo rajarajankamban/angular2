@@ -9,6 +9,8 @@ export class InputFieldComponent{
       title = 'app works!';
   product = {name:'product 1'};
   name : string = "";
+  options : string[] = ['First Class','Second Class','Third Class'];
+  user = {name:'',gender:'',option:''};
 
   changeName(value: string){
     console.log("Test :"+value)
@@ -19,6 +21,14 @@ export class InputFieldComponent{
     this.showItem = !this.showItem;
   }
 //User details add component
-  user : userDetails[] = [];
+  users : userDetails[] = [];
+  addUserDetails(){
+    this.users.push( new userDetails(this.user.name,this.user.gender,this.user.option));
+  }
+   // Here we are implementing the submitForm function. All we are doing for right now is spitting out the details of the form to our console.
+  submitForm(form: any): void{
+    console.log('Form Data: ');
+    console.log(form);
+  }
 
 } 
