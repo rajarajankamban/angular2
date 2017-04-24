@@ -8,9 +8,11 @@ import {HeaderComponent} from './basepage/app.header';
 import {MainComponent} from './basepage/app.main';
 import {FooterComponent} from './basepage/app.footer';
 import {InputFieldComponent} from './InputFieldComponent/inputfield.component';
+
+import {HeroDetailsComponent} from './HeroDetailsComponent/herodetails.component';
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent,MainComponent,FooterComponent,InputFieldComponent
+    AppComponent,HeaderComponent,MainComponent,FooterComponent,InputFieldComponent,HeroDetailsComponent
   ],
   imports: [
     BrowserModule,
