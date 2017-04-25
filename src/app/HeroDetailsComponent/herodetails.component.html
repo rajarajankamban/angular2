@@ -4,7 +4,7 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h1>Hero Form</h1>
-    <form>
+    <form #heroForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" #name class="form-control" [(ngModel)]="model.name" name="name" id="name" required>
@@ -26,6 +26,7 @@
         <input type="text" class="form-control" [(ngModel)]="model.alterEgo" name="alterEgo" id="alterEgo">
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
+      <button type="reset" (click) = "heroForm.reset()">Reset</button>
     </form>
 </div>
 </div>

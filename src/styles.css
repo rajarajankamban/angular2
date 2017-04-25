@@ -78,3 +78,10 @@ input[type="radio"] {
 .radio-inline input[type="radio"]{
     margin-top: -7px;
     }
+
+input[type="text"]:required.ng-valid.ng-touched{
+  border: 1pt solid #16b316;    
+}
+input[type="text"].ng-invalid.ng-touched{
+    border: 1pt solid red;
+}
